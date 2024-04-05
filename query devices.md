@@ -1,4 +1,5 @@
 Setup the environment:
+
 ```
 student@nuc21:~$ python -m venv openvino_env
 source openvino_env/bin/activate
