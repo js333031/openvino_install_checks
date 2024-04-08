@@ -9,7 +9,7 @@ python -m pip install openvino
 pip install -r /opt/intel/openvino_2024.0.0/python/requirements.txt
 pip install openvino-dev==2024.0.0[pytorch,onnx]
 
-``
+```
 
 Testing which devices are capable of inferencing:
 ```
