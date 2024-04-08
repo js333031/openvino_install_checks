@@ -7,15 +7,20 @@ python -m pip install --upgrade pip
 python -m pip install openvino
 # follow steps from reference #3 below. If it's a new python env (as done above), use the pip install -r requirements.txt step to update the venv
 pip install -r /opt/intel/openvino_2024.0.0/python/requirements.txt
-pip install openvino-dev==2024.0.0
+pip install openvino-dev==2024.0.0[pytorch,onnx]
+
 ``
 
 Testing which devices are capable of inferencing:
 ```
 source ~/openvino_env/bin/activate
+
 source /opt/intel/openvino_2024/setupvars.sh
+
 cd /opt/intel/openvino_2024/samples/cpp
+
 ./build_samples.sh
+
 cd ~/openvino_cpp_samples_build/intel64/Release
 
 (openvino_env) student@nuc21:~/openvino_cpp_samples_build/intel64/Release$ ./hello_query_device
