@@ -1,17 +1,21 @@
-Setup the environment:
-
+# Setup the environment:
+## Runtime
 ```
 student@nuc21:~$ python -m venv openvino_env
 source openvino_env/bin/activate
 python -m pip install --upgrade pip
 python -m pip install openvino
-# follow steps from reference #3 below. If it's a new python env (as done above), use the pip install -r requirements.txt step to update the venv
+```
+## Optional for Development tasks
+Follow steps from [reference #3](https://github.com/js333031/openvino_install_checks/edit/main/query%20devices.md#references) below. If it's a new python env (as done above), use the `pip install -r requirements.txt` step to update the venv
+```
 pip install -r /opt/intel/openvino_2024.0.0/python/requirements.txt
 pip install openvino-dev==2024.0.0[pytorch,onnx]
-
 ```
 
-Testing which devices are capable of inferencing:
+# Listing devices capable of inferencing:
+## Building sample code, including `hello_query_device`
+### requires the Development tasks steps to be completed
 ```
 source ~/openvino_env/bin/activate
 
@@ -130,7 +134,7 @@ cd ~/openvino_cpp_samples_build/intel64/Release
 (openvino_env) student@nuc21:~/openvino_cpp_samples_build/intel64/Release$
 ```
 
-References:
+# References:
 ```
 1. https://docs.openvino.ai/2024/get-started/install-openvino/install-openvino-pip.html
 2. https://docs.openvino.ai/2024/learn-openvino/openvino-samples/get-started-demos.html
